@@ -42,9 +42,12 @@ function checkFibonacciNumber() {
 
 
   if (fNumber == usernumber) {
-    document.getElementsByTagName('p')[0].innerHTML = 'Your number <strong>'+usernumber+'</strong> is a Fibonacci Number';
+    document.getElementsByClassName('message')[0].innerHTML = '<h2><span style="color:#27ae60;margin-right:15px;">&#10003;</span>'+usernumber+' is a Fibonacci Number</h2>'+
+    '<p>Your number <strong>'+usernumber+'</strong> is a Fibonacci Number</p>';
   } else {
-    document.getElementsByTagName('p')[0].innerHTML = 'Your number <strong>'+usernumber+'</strong> is a Fibonacci Number. The next numbers are: previous <i>'+fibonacciSequence[fibonacciSequence.length - 2]+'</i> and then <i>'+fibonacciSequence[fibonacciSequence.length - 1]+'</i>';
+    document.getElementsByClassName('message')[0].innerHTML = '<h2><span style="color:#c0392b;margin-right:15px;">&#10007;</span>'+usernumber+' is not a Fibonacci Number.</h2>'+
+    '<p>Your number <strong>'+usernumber+'</strong> is not a Fibonacci Number.</p>'+
+    '<p>The nearby Fibonacci numbers are:</p><p><strong>'+fibonacciSequence[fibonacciSequence.length - 2]+' </strong>&#9667;<strong> '+usernumber+' </strong>&#9657; <strong> '+fibonacciSequence[fibonacciSequence.length - 1]+'</strong><p>';
   }
   restartFibonacci();
 }
