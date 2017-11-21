@@ -13,4 +13,6 @@ function genFibonacciNumber() {
   // the magic is here
   fNumber = fNumber+fibonacciSequence[fibonacciSequence.length - 2]; // take the number to calculate
   fibonacciSequence.push(fNumber); // insert the new number
+
+  return fNumber;
 }
