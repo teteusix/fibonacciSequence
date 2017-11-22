@@ -38,10 +38,12 @@ function genFibonacciNumber() {
 // INPUT VALIDADION
 function inputValid() {
   if (usernumber.value == "") {
-    console.log('Ta vazio');
+    document.getElementsByClassName('message')[0].innerHTML = '<strong style="color:#c0392b">The input is empty, please insert a number</strong>';
+    usernumber.style.border = '1px solid #c0392b';
+    // #c0392b
   }else {
-    console.log('Tem coisa');
-    // checkFibonacciNumber();
+    usernumber.style.border = '1px solid #3498db';
+    checkFibonacciNumber();
   }
   return true;
 }
